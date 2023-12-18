@@ -29,12 +29,15 @@ function Navbar() {
     <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         { user ? (
             <>
+            <Link to='/newpost'>
+            <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create Post</button>
+            </Link>
             <button type="button" onClick={logout} className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Logout</button>
             <small>{user?.displayName}</small>
-          <button type="button" className="flex text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-            <span className="sr-only">Open user menu</span>
-            <img className="w-10 h-10 rounded-2xl" src={user?.photoURL || ""} alt="user photo" />
-          </button>
+            <button type="button" className="flex text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+              <span className="sr-only">Open user menu</span>
+              <img className="w-10 h-10 rounded-2xl" src={user?.photoURL || ""} alt="user photo" />
+            </button>
           </>
         )  
         :
