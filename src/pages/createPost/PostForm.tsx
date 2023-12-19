@@ -30,14 +30,13 @@ function PostForm() {
 
   const postRef = collection(db, "posts")        
 
-
   const onCreatePost = async (data:CreateFormData) => {
     await addDoc(postRef, {
       ...data,
       username: user?.displayName,
       userId : user?.uid, 
     });
-    navigate('/')
+    navigate('/all-posts')
   };
 
 
