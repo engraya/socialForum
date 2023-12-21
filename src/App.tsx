@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import MainPage from './pages/MainPage';
 import CreatePost from './pages/createPost/CreatePost';
 import Posts from './pages/Posts';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
